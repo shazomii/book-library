@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Figtree';
+    background-color: rgb(224, 224, 224);
+    padding: 24px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.books-container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.book {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.book-details {
+    display: grid;
+    align-content: start;
+    gap: 1em;
+}
+
+.book-actions {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: end;
+    justify-content: space-between;
+}
+
+.button-read,
+.button-delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.button-delete {
+    background-color: red;
+}
+
+.book-title {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.book-author {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.add-book-modal {
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    border: none;
+    width: 350px;
+}
+
+.book-form {
+    display: grid;
+    gap: 12px;
+}
+
+.form-row {
+    display: grid;
+    gap: 8px;
+}
+
+.form-row input {
+    background-color: #ffffff;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 0.9em;
+}
+
+.form-row input[type='text']:invalid {
+    border: 1px solid #D55C5F;
+}
+
+.form-row .checkbox-label {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    justify-content: start;
+    margin-bottom: 8px;
+}
+
+.form-row .button-submit,
+.form-row .button-cancel,
+.button-new-book {
+    font-size: 0.9em;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.form-row .button-submit,
+.button-new-book {
+    color: #FFFFFF;
+    background-color: #5995DA;
+}
+
+.form-row .button-cancel:hover {
+    background-color: #D6D9DC;
+}
+
+.form-row .button-submit:hover,
+.button-new-book:hover {
+    background-color: #76AEED;
+}
+
+.form-row .button-submit:active,
+.button-new-book:active {
+    background-color: #407FC7;
+}
