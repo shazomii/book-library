@@ -57,6 +57,13 @@ class Library {
         const bookItem = document.createElement("div");
         bookItem.className = "book";
         bookItem.setAttribute("data-id", book.id);
+
+        if (book.read) {
+            const badge = document.createElement("div");
+            badge.className = "book-badge";
+            badge.textContent = "READ";
+            bookItem.appendChild(badge);
+        }
         
         const bookDetails = document.createElement("div");
         bookDetails.className = "book-details";
